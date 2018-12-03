@@ -1,10 +1,10 @@
 import './styles/style.css';
 
-import $ from 'jquery';
+// import $ from 'jquery';
 
-let textIn = document.jquerySlector('.message-field');
+let textIn = document.querySlector('.message-field');
 
-let textOut = document.jquerySlector('.message-formatted');
+let textOut = document.querySlector('.message-formatted');
 
 // textIn.addEventListener('input', function () {
 
@@ -12,12 +12,12 @@ let textOut = document.jquerySlector('.message-formatted');
 
 // });
 
-function formattedMessage () {
-	let spaceSearch = /^\s+\n/g;
+function textTransform () {
+	let extraSpaceAndLine = /^\s+\n/g;
 
-	return textIn.value.toLowerCase().trim().replace(spaceSearch, '');
+	return textIn.value.toLowerCase().trim().replace(extraSpaceAndLine, '');
 }
 
 textIn.addEventListener('input', function () {
-	textOut.innerHTML(formattedMessage);
+	textOut.innerHTML(textTransform());
 });
