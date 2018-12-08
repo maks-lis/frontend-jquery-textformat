@@ -19,5 +19,5 @@ function textTransform () {
 }
 
 textIn.addEventListener('input', function () {
-	textOut.innerHTML(textTransform());
+	textOut.innerHTML(textTransform(textIn.value));
 });
